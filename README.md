@@ -1,10 +1,11 @@
+# Cliente Feliz - Back-end
+
+Este repositório contém o código-fonte do projeto Cliente Feliz - Back-end, construído com Node.js 14.21.3. O projeto utiliza as seguintes bibliotecas: bcrypt, nodemailer e express para fornecer funcionalidades de autenticação e gerenciamento de clientes.
+
 <p align="center">
   <img alt="Cliente Feliz" title="Cliente Feliz" src="https://i.ibb.co/nrnPzKY/Screenshot-2023-08-23-at-17-45-27.png" width="100%" />
 </p>
 
-# Cliente Feliz - Back-end
-
-Este repositório contém o código-fonte do projeto Cliente Feliz - Back-end, construído com Node.js 14.21.3. O projeto utiliza as seguintes bibliotecas: bcrypt, nodemailer e express para fornecer funcionalidades de autenticação e gerenciamento de clientes.
 
 ## Tecnologias Utilizadas
 
