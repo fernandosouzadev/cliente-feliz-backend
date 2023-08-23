@@ -4,12 +4,12 @@ const config = require('../config/config')
 class EmailSend {
   constructor() {
     this.transport = nodemailer.createTransport({
-      host: 'smtp.office365.com',
-      port: '587',
-      secure: false,
+      host: config.host_mail,
+      port: config.port_mail,
+      secure: config.secure_mail,
       auth: {
-        user: 'naoresponda-clientefeliz@hotmail.com',
-        pass: 'clientefeliz587',
+        user: config.user_mail,
+        pass: config.pass_mail,
       },
     })
   }

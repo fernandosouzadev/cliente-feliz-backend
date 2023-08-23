@@ -17,6 +17,11 @@ const config = {
     base_url_frontend: process.env.BASE_URL_FRONTEND,
     jwtsecret: process.env.JWTSECRET,
     database_url: process.env.DATABASE_URL,
+    host_mail: process.env.HOST_MAIL,
+    port_mail: process.env.PORT_MAIL,
+    secure_mail: SECURE_MAIL,
+    user_mail: process.env.USER_MAIL,
+    pass_mail: process.env.PASS_EMAIL,
   },
 }
 

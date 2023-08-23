@@ -20,9 +20,14 @@ O projeto Cliente Feliz - Back-end é desenvolvido com as seguintes tecnologias 
 
 Para executar o Cliente Feliz - Back-end, é necessário configurar as variáveis de ambiente. As variáveis são definidas no ambiente de execução e incluem as seguintes configurações:
 
-- `Base_URL_FRONTEND`: A URL do front-end que a aplicação irá se comunicar.
-- `JWRSECRET`: A chave secreta usada para assinar e verificar tokens JWT (JSON Web Tokens).
-- `DATABASE_URL`: A URL do banco de dados utilizado pela aplicação.
+- `Base_URL_FRONTEND`: A URL do front-end que a aplicação irá se comunicar.`STRING`
+- `JWRSECRET`: A chave secreta usada para assinar e verificar tokens JWT (JSON Web Tokens).`STRING`
+- `DATABASE_URL`: A URL do banco de dados utilizado pela aplicação.`STRING`
+- `HOST_MAIL`: O Host smtp do e-mail para disparo.`STRING`
+- `PORT_MAIL`: Porta do e-mail para disparo.`STRING`
+- `SECURE_MAIL`: Se o email vai utilizar TSL.`BOLEAN`
+- `USER_MAIL`: E-mail que será utilizado para o disparo. `STRING`
+- `PASS_MAIL`: Senha do e-mail que será utilizado no disparo.`STRING`
 
 Certifique-se de configurar essas variáveis de ambiente de acordo com as configurações do seu ambiente.
 
