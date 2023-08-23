@@ -6,7 +6,6 @@ Este repositório contém o código-fonte do projeto Cliente Feliz - Back-end, c
   <img alt="Cliente Feliz" title="Cliente Feliz" src="https://i.ibb.co/nrnPzKY/Screenshot-2023-08-23-at-17-45-27.png" width="100%" />
 </p>
 
-
 ## Tecnologias Utilizadas
 
 O projeto Cliente Feliz - Back-end é desenvolvido com as seguintes tecnologias e bibliotecas:
@@ -62,9 +61,9 @@ Siga as etapas abaixo para iniciar o Cliente Feliz - Back-end em seu ambiente lo
 
 2. Execute `npm install` no terminal para instalar todas as dependências necessárias listadas no arquivo `package.json`.
 
-3. Configure as variáveis de ambiente (Base_URL_FRONTEND, JWRSECRET, DATABASE_URL) de acordo com as configurações do seu ambiente.
+3. Configure as variáveis de ambiente (Base_URL_FRONTEND, JWRSECRET, DATABASE_URL, HOST_MAIL, PORT_MAIL, SECURE_MAIL, USER_MAIL, PASS_MAIL) de acordo com as configurações do seu ambiente.
 
-4. Após a configuração das variáveis de ambiente, execute `npm start` para iniciar o servidor.
+4. Após a configuração das variáveis de ambiente, execute `npm run dev` para iniciar o servidor.
 
 Agora, o Cliente Feliz - Back-end estará em execução e pronto para ser integrado com o front-end correspondente.
 
