@@ -4,12 +4,12 @@ const config = require('../config/config')
 class EmailSend {
   constructor() {
     this.transport = nodemailer.createTransport({
-      host: config.host_mail,
-      port: config.port_mail,
-      secure: config.secure_mail,
+      host: config.app.host_mail,
+      port: config.app.port_mail,
+      secure: config.app.secure_mail,
       auth: {
-        user: config.user_mail,
-        pass: config.pass_mail,
+        user: config.app.user_mail,
+        pass: config.app.pass_mail,
       },
     })
   }
@@ -17,7 +17,7 @@ class EmailSend {
   verifyEmail = (user) => {
     this.transport
       .sendMail({
-        from: 'Cliente Feliz <naoresponda-clientefeliz@hotmail.com>',
+        from: `Cliente Feliz <${config.app.user_mail}>`,
         to: user.email,
         subject: 'Verificação de e-mail',
         html: `<h2>Olá ${user.name}, bem vindo ao Cliente Feliz!</h2><br/><p>Clique no link abaixo para validar seu e-mail</p><br/><a href="${config.app.base_url_frontend}/validar-email/${user.emailToken}">CONFIRMAR E-MAIL</a>`,
