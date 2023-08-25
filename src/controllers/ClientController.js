@@ -58,6 +58,12 @@ class ClientController {
   async editById(req, res) {
     const id = req.params.id
     const { name, description } = req.body
+    const isExistClient = await Client.findById(id)
+
+    if (!!isExistClient) {
+      res.status(422).json({ message: 'Já existe um Cliente com esse nome' })
+      return
+    }
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
       res.status(422).json({ message: 'ID inválido' })
