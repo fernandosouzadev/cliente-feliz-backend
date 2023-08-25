@@ -23,7 +23,7 @@ class UserController {
       return
     }
     if (!validateEmail(email)) {
-      res.status(422).json({ message: 'E-mail invalido' })
+      res.status(403).json({ message: 'E-mail invalido' })
       return
     }
 

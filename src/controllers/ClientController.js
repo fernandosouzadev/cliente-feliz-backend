@@ -4,10 +4,18 @@ const Client = require('../models/Client')
 class ClientController {
   async register(req, res) {
     const { name, description } = req.body
+    const isExistClient = await Client.findOne({ name })
+
     if (!name) {
       res.status(422).json({ message: 'O campo nome é obrigatorio' })
       return
     }
+
+    if (!!isExistClient) {
+      res.status(422).json({ message: 'Já existe um Cliente com esse nome' })
+      return
+    }
+
     try {
       const client = await Client.create({
         name: name,
@@ -120,7 +128,7 @@ class ClientController {
       const clients = await Client.find(query)
 
       if (clients.length === 0) {
-        res.status(422).json({ message: 'Nenhum cliente encontrado' })
+        res.status(404).json({ message: 'Nenhum cliente encontrado' })
         return
       }
 
