@@ -60,8 +60,11 @@ class ClientController {
     const { name, description } = req.body
     const isExistClient = await Client.find({ name: name })
 
-    if (isExistClient[0]) {
-      res.status(422).json({ message: 'Já existe um Cliente com esse nome' })
+    if (
+      isExistClient[0].name === name &&
+      isExistClient[0].description === description
+    ) {
+      res.status(422).json({ message: 'Já existe um Cliente com esses dados' })
       return
     }
 
