@@ -58,9 +58,9 @@ class ClientController {
   async editById(req, res) {
     const id = req.params.id
     const { name, description } = req.body
-    const isExistClient = await Client.findById(id)
+    const isExistClient = await Client.find({ name: name })
 
-    if (!!isExistClient) {
+    if (isExistClient[0]) {
       res.status(422).json({ message: 'Já existe um Cliente com esse nome' })
       return
     }
