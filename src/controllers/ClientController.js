@@ -60,14 +60,6 @@ class ClientController {
     const { name, description } = req.body
     const isExistClient = await Client.find({ name: name })
 
-    if (
-      isExistClient[0].name === name &&
-      isExistClient[0].description === description
-    ) {
-      res.status(422).json({ message: 'Já existe um Cliente com esses dados' })
-      return
-    }
-
     if (!mongoose.Types.ObjectId.isValid(id)) {
       res.status(422).json({ message: 'ID inválido' })
       return
@@ -75,6 +67,14 @@ class ClientController {
 
     if (!name) {
       res.status(422).json({ message: 'O campo nome é obrigatorio' })
+      return
+    }
+
+    if (
+      isExistClient[0]?.name === name &&
+      isExistClient[0]?.description === description
+    ) {
+      res.status(422).json({ message: 'Já existe um Cliente com esses dados' })
       return
     }
 
